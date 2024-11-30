@@ -1,5 +1,6 @@
 # C-Monopoly
-
+- [English README](README_EN.md)
+- [中文 README](README.md)
 ## Project Introduction
 
 C-Monopoly is a classic Monopoly board game implemented in C language. This project aims to provide a simple command-line interface for users to experience the fun of Monopoly in the terminal.
