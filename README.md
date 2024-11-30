@@ -1,5 +1,6 @@
 # C-Monopoly
-
+- [English README](README_EN.md)
+- [中文 README](README.md)
 ## 项目简介
 
 C-Monopoly 是一个用 C 语言实现的经典大富翁（Monopoly）桌游。这个项目旨在提供一个简单的命令行界面，让用户能够在终端中体验大富翁游戏的乐趣。
