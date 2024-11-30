@@ -1,0 +1,29 @@
+# Project: Monopoly_SingleFile
+# Makefile created by Dev-C++ 6.5
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o
+LINKOBJ  = main.o
+LIBS     = -L"D:/DevCpp/Dev-Cpp/MinGW32/lib" -L"D:/DevCpp/Dev-Cpp/MinGW32/i686-w64-mingw32/lib" -static-libstdc++ -static-libgcc -m32 -g3
+INCS     = -I"D:/DevCpp/Dev-Cpp/MinGW32/include" -I"D:/DevCpp/Dev-Cpp/MinGW32/i686-w64-mingw32/include" -I"D:/DevCpp/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.2.0/include" -I"D:/DevCpp/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.2.0/include-fixed"
+CXXINCS  = -I"D:/DevCpp/Dev-Cpp/MinGW32/include" -I"D:/DevCpp/Dev-Cpp/MinGW32/i686-w64-mingw32/include" -I"D:/DevCpp/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.2.0/include" -I"D:/DevCpp/Dev-Cpp/MinGW32/lib/gcc/i686-w64-mingw32/10.2.0/include-fixed" -I"D:/DevCpp/Dev-Cpp/MinGW32/include/c++/10.2.0" -I"D:/DevCpp/Dev-Cpp/MinGW32/include/c++/10.2.0/i686-w64-mingw32" -I"D:/DevCpp/Dev-Cpp/MinGW32/include/c++/10.2.0/backward"
+BIN      = Monopoly_SingleFile.exe
+CXXFLAGS = $(CXXINCS) -ansi -Ofast -m32 -std=c11 -g3 -fexec-charset=UTF-8 -finput-charset=GBK
+ENCODINGS = -finput-charset=utf-8 -fexec-charset=gbk
+CFLAGS   = $(INCS) -ansi -Ofast -m32 -std=c11 -g3 -fexec-charset=UTF-8 -finput-charset=GBK
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)  $(ENCODINGS) 
